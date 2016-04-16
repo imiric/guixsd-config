@@ -39,7 +39,7 @@
 
   ;; Globally-installed packages.
   (packages (append (map specification->package
-                    '("tcpdump" "htop" "git"))
+                    '("emacs" "git" "htop" "nss-certs" "openssh" "vim" "zsh"))
              %base-packages))
 
   ;; Add services to the baseline: a DHCP client
