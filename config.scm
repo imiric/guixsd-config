@@ -39,8 +39,32 @@
 
   ;; Globally-installed packages.
   (packages (append (map specification->package
-                    '("emacs" "git" "htop" "nss-certs" "openssh" "vim" "zsh"))
-             %base-packages))
+                         '(
+                           "bspwm"
+                           "dbus"
+                           "emacs"
+                           "git"
+                           "htop"
+                           "netcat"
+                           "nss-certs"
+                           "openssh"
+                           "vim"
+                           "xinit"
+                           "xf86-input-evdev"
+                           "xf86-video-fbdev"
+                           "xf86-video-modesetting"
+                           "xf86-input-mouse"
+                           "xf86-input-keyboard"
+                           "xf86-video-vesa"
+                           "xkbcomp"
+                           "xkill"
+                           "xorg-server"
+                           "xrandr"
+                           "xsetroot"
+                           "xterm"
+                           "zsh"
+                           ))
+                    %base-packages))
 
   ;; Add services to the baseline: a DHCP client
   (services (cons* (dhcp-client-service)
